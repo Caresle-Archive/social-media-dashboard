@@ -38,8 +38,13 @@ body {
   background-color: var(--very-dark-blue-bg);
 }
 
-div {
+div, h2 {
   color: var(--white);
+}
+
+h2 {
+  font-weight: 700;
+  margin-left: 14px;
 }
 
 button {
@@ -90,11 +95,13 @@ button > div {
   grid-template-areas: repeat(4, 200px);
 }
 
-.social-element {
+.social-element, .stats-card {
   background-color: var(--dark-desaturated-blue);
-  margin: 8px 1.25rem;
-  /* padding: 8px; */
   border-radius: 4px;
+  margin: 8px 1.25rem;
+}
+
+.social-element {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,4 +157,72 @@ button > div {
 
 .today {
   color: var(--white);
+  margin: 8px 0;
+}
+
+.today > img {
+  width: 12px;
+  height: 8px;
+  margin: 0 4px 8px 0;
+}
+
+.stats-up {
+  color: var(--lime-green);
+}
+
+.stats-down {
+  color: var(--bright-red);
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 120px);
+}
+
+.stats-card {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "item-1 item-3" "item-2 item-4";
+}
+
+.stats-card-item-1 {
+  grid-area: item-1;
+  color: var(--desaturated-blue);
+  font-size: 1.1rem;
+}
+
+.stats-card-item-2 {
+  grid-area: item-2;
+  font-size: 2.2rem;
+}
+
+.stats-card-item-3 {
+  grid-area: item-3;
+}
+
+.stats-card-item-4 {
+  grid-area: item-4;
+}
+
+.stats-card-item-4 > img {
+  width: 12px;
+  height: 8px;
+  align-self: center;
+  margin-right: 4px;
+}
+
+.stats-card-item-1, .stats-card-item-2, .stats-card-item-3, .stats-card-item-4 {
+  display: flex;
+  align-self: center;
+}
+
+.stats-card-item-1, .stats-card-item-2 {
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.stats-card-item-3, .stats-card-item-4 {
+  justify-self: center;
 }
