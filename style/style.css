@@ -92,16 +92,27 @@ button > div {
 
 .social-element {
   background-color: var(--dark-desaturated-blue);
-  margin: 8px 1rem;
+  margin: 8px 1.25rem;
+  /* padding: 8px; */
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--desaturated-blue);
 }
 
 .social-element > span > img {
   margin-top: 8px;
+}
+
+.social-element > span {
+  display: flex;
+  align-items: center;
+}
+
+.social-element > span > span {
+  margin: 8px 0 0 8px;
 }
 
 #facebook {
@@ -126,4 +137,17 @@ button > div {
 .stats-number {
   font-weight: 700;
   font-size: 3rem;
+  color: var(--white);
+  margin-top: 8px;
+}
+
+.followers {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.today {
+  color: var(--white);
 }
