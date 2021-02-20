@@ -1,0 +1,129 @@
+:root {
+  /* General Colors */
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+
+  /* Dark theme */
+  --toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --very-dark-blue-bg: hsl(230, 17%, 14%); /* (BG) */
+  --very-dark-blue-bg-pattern: hsl(232, 19%, 15%); /* (Top BG Pattern) */
+  --dark-desaturated-blue: hsl(228, 28%, 20%); /* (Card BG) */
+  --desaturated-blue: hsl(228, 34%, 66%); /* (Text) */
+  --white: hsl(0, 0%, 100%); /* (Text) */
+
+  /* Light theme */
+  --very-pale-blue: hsl(225, 100%, 98%); /* (Top BG Pattern) */
+  --light-grayish-blue: hsl(227, 47%, 96%); /* (Card BG) */
+  --dark-grayish-blue: hsl(228, 12%, 44%); /* (Text) */
+  --very-dark-blue: hsl(230, 17%, 14%); /* (Text) */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--very-dark-blue-bg);
+}
+
+div {
+  color: var(--white);
+}
+
+button {
+  background: var(--toggle-dark);
+  border: none;
+  width: 64px;
+  height: 28px;
+  border-radius: 16px;
+}
+
+button > div {
+  background-color: var(--very-dark-blue-bg);
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  margin-left: 4px;
+}
+
+.dashboard {
+  padding: 0.5rem;
+}
+
+.dashboard span, .dashboard > p, .dashboard {
+  font-weight: 700;
+}
+
+.dashboard > span {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.dashboard > p {
+  color: var(--desaturated-blue);
+  border-bottom: 1px solid var(--desaturated-blue);
+  margin: 8px 0;
+}
+
+.dashboard > div {
+  color: var(--desaturated-blue);
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: repeat(4, 200px);
+}
+
+.social-element {
+  background-color: var(--dark-desaturated-blue);
+  margin: 8px 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-element > span > img {
+  margin-top: 8px;
+}
+
+#facebook {
+  border-top: 4px solid var(--facebook);
+}
+
+#twitter {
+  border-top: 4px solid var(--twitter);
+}
+
+#instagram > div {
+  width: 100%;
+  height: 4px;
+  background: var(--instagram);
+  border-radius: 4px 4px 0 0;
+}
+
+#youtube {
+  border-top: 4px solid var(--youtube);
+}
+
+.stats-number {
+  font-weight: 700;
+  font-size: 3rem;
+}
