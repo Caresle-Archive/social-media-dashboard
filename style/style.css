@@ -89,6 +89,10 @@ button > div {
   justify-content: space-between;
 }
 
+.dashboard, .social-element, .stats-card {
+  margin: 8px 1.25rem;
+}
+
 .social-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -98,7 +102,6 @@ button > div {
 .social-element, .stats-card {
   background-color: var(--dark-desaturated-blue);
   border-radius: 4px;
-  margin: 8px 1.25rem;
 }
 
 .social-element {
@@ -225,4 +228,14 @@ button > div {
 
 .stats-card-item-3, .stats-card-item-4 {
   justify-self: center;
+}
+
+/* Light theme */
+
+.bg-light {
+  background-color: var(--white);
+}
+
+.text-light {
+  color: var(--very-dark-blue);
 }
