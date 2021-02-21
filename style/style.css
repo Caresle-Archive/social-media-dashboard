@@ -44,6 +44,8 @@ html {
   --green: var(--lime-green);
   --red: var(--bright-red);
   --toggle: var(--toggle-light);
+  --switcher-hover: var(--toggle-dark);
+  --background-color-card-hover: var(--very-pale-blue);
 }
 
 .dark {
@@ -55,6 +57,8 @@ html {
   --green: var(--lime-green);
   --red: var(--bright-red);
   --toggle: var(--toggle-dark);
+  --switcher-hover: var(--toggle-dark);
+  --background-color-card-hover: var(--very-dark-blue-bg-pattern);
 }
 
 body {
@@ -85,6 +89,16 @@ button > div {
   width: 23px;
   height: 23px;
   margin-left: 4px;
+}
+
+button:hover {
+  background: var(--switcher-hover);
+  cursor: pointer;
+}
+
+.floating-selector {
+  float: right;
+  margin-right: 2px;
 }
 
 .dashboard {
@@ -149,6 +163,10 @@ button > div {
   margin: 8px 0 0 8px;
 }
 
+.social-element:hover {
+  background-color: var(--background-color-card-hover);
+}
+
 #facebook {
   border-top: 4px solid var(--facebook);
 }
@@ -199,6 +217,10 @@ button > div {
 
 .stats-down {
   color: var(--red);
+}
+
+.stats-card:hover {
+  background: var(--background-color-card-hover);
 }
 
 .stats-container {
@@ -256,9 +278,18 @@ button > div {
 
 @media only screen and (min-width: 1024px) {
   
+  .dashboard > div {
+    justify-content: flex-end;
+  }
+
+  .dashboard > div > span {
+    align-self: center;
+    margin-right: 4px;
+  }
+
   .social-container {
     grid-template-columns: repeat(4, 1fr);
-    
+
   }
 
   .stats-container {
