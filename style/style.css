@@ -16,6 +16,7 @@
   --white: hsl(0, 0%, 100%); /* (Text) */
 
   /* Light theme */
+  --toggle-light: hsl(230, 22%, 74%);
   --very-pale-blue: hsl(225, 100%, 98%); /* (Top BG Pattern) */
   --light-grayish-blue: hsl(227, 47%, 96%); /* (Card BG) */
   --dark-grayish-blue: hsl(228, 12%, 44%); /* (Text) */
@@ -34,29 +35,52 @@ html {
   font-size: 14px;
 }
 
-body {
-  background-color: var(--very-dark-blue-bg);
+.light {
+  --background-color: var(--white);
+  --background-color-card: var(--light-grayish-blue);
+  --color-font-secondary: var(--dark-grayish-blue);
+  --color-font: var(--very-dark-blue);
+  --color-font-heading: var(--dark-grayish-blue);
+  --green: var(--lime-green);
+  --red: var(--bright-red);
+  --toggle: var(--toggle-light);
 }
 
-div, h2 {
-  color: var(--white);
+.dark {
+  --background-color: var(--very-dark-blue-bg);
+  --background-color-card: var(--dark-desaturated-blue);
+  --color-font-secondary: var(--desaturated-blue);
+  --color-font: var(--white);
+  --color-font-heading: var(--white);
+  --green: var(--lime-green);
+  --red: var(--bright-red);
+  --toggle: var(--toggle-dark);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+div {
+  color: var(--color-font);
 }
 
 h2 {
+  color: var(--color-font-heading);
   font-weight: 700;
   margin-left: 14px;
 }
 
 button {
-  background: var(--toggle-dark);
   border: none;
   width: 64px;
   height: 28px;
   border-radius: 16px;
+  background: var(--toggle);
 }
 
 button > div {
-  background-color: var(--very-dark-blue-bg);
+  background-color: var(--background-color);
   border-radius: 50%;
   width: 23px;
   height: 23px;
@@ -78,13 +102,13 @@ button > div {
 }
 
 .dashboard > p {
-  color: var(--desaturated-blue);
-  border-bottom: 1px solid var(--desaturated-blue);
+  color: var(--color-font-secondary);
+  border-bottom: 1px solid var(--color-font-secondary);
   margin: 8px 0;
 }
 
 .dashboard > div {
-  color: var(--desaturated-blue);
+  color: var(--color-font-secondary);
   display: flex;
   justify-content: space-between;
 }
@@ -100,7 +124,7 @@ button > div {
 }
 
 .social-element, .stats-card {
-  background-color: var(--dark-desaturated-blue);
+  background-color: var(--background-color-card);
   border-radius: 4px;
 }
 
@@ -109,7 +133,7 @@ button > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--desaturated-blue);
+  color: var(--color-font-secondary);
 }
 
 .social-element > span > img {
@@ -147,7 +171,7 @@ button > div {
 .stats-number {
   font-weight: 700;
   font-size: 3rem;
-  color: var(--white);
+  color: var(--color-font);
   margin-top: 8px;
 }
 
@@ -159,7 +183,7 @@ button > div {
 }
 
 .today {
-  color: var(--white);
+  color: var(--color-font);
   margin: 8px 0;
 }
 
@@ -170,11 +194,11 @@ button > div {
 }
 
 .stats-up {
-  color: var(--lime-green);
+  color: var(--green);
 }
 
 .stats-down {
-  color: var(--bright-red);
+  color: var(--red);
 }
 
 .stats-container {
@@ -192,7 +216,7 @@ button > div {
 
 .stats-card-item-1 {
   grid-area: item-1;
-  color: var(--desaturated-blue);
+  color: var(--color-font-secondary);
   font-size: 1.1rem;
 }
 
@@ -230,12 +254,15 @@ button > div {
   justify-self: center;
 }
 
-/* Light theme */
+@media only screen and (min-width: 1024px) {
+  
+  .social-container {
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
 
-.bg-light {
-  background-color: var(--white);
-}
-
-.text-light {
-  color: var(--very-dark-blue);
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 120px);
+  }
 }
