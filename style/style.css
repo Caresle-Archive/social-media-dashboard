@@ -65,6 +65,11 @@ body {
   background-color: var(--background-color);
 }
 
+.main-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 div {
   color: var(--color-font);
 }
@@ -277,7 +282,10 @@ button:hover {
 }
 
 @media only screen and (min-width: 1024px) {
-  
+  .main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }  
   .dashboard > div {
     justify-content: flex-end;
   }
@@ -289,7 +297,6 @@ button:hover {
 
   .social-container {
     grid-template-columns: repeat(4, 1fr);
-
   }
 
   .stats-container {
