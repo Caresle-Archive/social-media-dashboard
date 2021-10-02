@@ -1,0 +1,23 @@
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }  
+  .dashboard > div {
+    justify-content: flex-end;
+  }
+
+  .dashboard > div > span {
+    align-self: center;
+    margin-right: 4px;
+  }
+
+  .social-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 120px);
+  }
+}
