@@ -1,35 +1,15 @@
-:root {
-  /* General Colors */
-  --lime-green: hsl(163, 72%, 41%);
-  --bright-red: hsl(356, 69%, 56%);
-  --facebook: hsl(208, 92%, 53%);
-  --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-  --youtube: hsl(348, 97%, 39%);
-  /* Dark theme */
-  --toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  --very-dark-blue-bg: hsl(230, 17%, 14%);
-  /* (BG) */
-  --very-dark-blue-bg-pattern: hsl(232, 19%, 15%);
-  /* (Top BG Pattern) */
-  --dark-desaturated-blue: hsl(228, 28%, 20%);
-  /* (Card BG) */
-  --desaturated-blue: hsl(228, 34%, 66%);
-  /* (Text) */
-  --white: hsl(0, 0%, 100%);
-  /* (Text) */
-  /* Light theme */
-  --toggle-light: hsl(230, 22%, 74%);
-  --very-pale-blue: hsl(225, 100%, 98%);
-  /* (Top BG Pattern) */
-  --light-grayish-blue: hsl(227, 47%, 96%);
-  /* (Card BG) */
-  --dark-grayish-blue: hsl(228, 12%, 44%);
-  /* (Text) */
-  --very-dark-blue: hsl(230, 17%, 14%);
-  /* (Text) */
-}
-
+/* General Colors */
+/* Dark theme */
+/* (BG) */
+/* (Top BG Pattern) */
+/* (Card BG) */
+/* (Text) */
+/* (Text) */
+/* Light theme */
+/* (Top BG Pattern) */
+/* (Card BG) */
+/* (Text) */
+/* (Text) */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -39,29 +19,29 @@
 }
 
 .light {
-  --background-color: var(--white);
-  --background-color-card: var(--light-grayish-blue);
-  --color-font-secondary: var(--dark-grayish-blue);
-  --color-font: var(--very-dark-blue);
-  --color-font-heading: var(--dark-grayish-blue);
-  --green: var(--lime-green);
-  --red: var(--bright-red);
-  --toggle: var(--toggle-light);
-  --switcher-hover: var(--toggle-dark);
-  --background-color-card-hover: var(--very-pale-blue);
+  --background-color: white;
+  --background-color-card: #f0f2fa;
+  --color-font-secondary: #63687e;
+  --color-font: #1e202a;
+  --color-font-heading: #63687e;
+  --green: #1db489;
+  --red: #dc414c;
+  --toggle: #aeb3cb;
+  --switcher-hover: linear-gradient(to right, #378fe6, #3eda82);
+  --background-color-card-hover: #f5f7ff;
 }
 
 .dark {
-  --background-color: var(--very-dark-blue-bg);
-  --background-color-card: var(--dark-desaturated-blue);
-  --color-font-secondary: var(--desaturated-blue);
-  --color-font: var(--white);
-  --color-font-heading: var(--white);
-  --green: var(--lime-green);
-  --red: var(--bright-red);
-  --toggle: var(--toggle-dark);
-  --switcher-hover: var(--toggle-dark);
-  --background-color-card-hover: var(--very-dark-blue-bg-pattern);
+  --background-color: #1e202a;
+  --background-color-card: #252a41;
+  --color-font-secondary: #8b97c6;
+  --color-font: white;
+  --color-font-heading: white;
+  --green: #1db489;
+  --red: #dc414c;
+  --toggle: linear-gradient(to right, #378fe6, #3eda82);
+  --switcher-hover: linear-gradient(to right, #378fe6, #3eda82);
+  --background-color-card-hover: #1f212e;
 }
 
 html, body {

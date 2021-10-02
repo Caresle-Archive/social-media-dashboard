@@ -1,27 +1,4 @@
-:root {
-  /* General Colors */
-  --lime-green: hsl(163, 72%, 41%);
-  --bright-red: hsl(356, 69%, 56%);
-  --facebook: hsl(208, 92%, 53%);
-  --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-  --youtube: hsl(348, 97%, 39%);
-
-  /* Dark theme */
-  --toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  --very-dark-blue-bg: hsl(230, 17%, 14%); /* (BG) */
-  --very-dark-blue-bg-pattern: hsl(232, 19%, 15%); /* (Top BG Pattern) */
-  --dark-desaturated-blue: hsl(228, 28%, 20%); /* (Card BG) */
-  --desaturated-blue: hsl(228, 34%, 66%); /* (Text) */
-  --white: hsl(0, 0%, 100%); /* (Text) */
-
-  /* Light theme */
-  --toggle-light: hsl(230, 22%, 74%);
-  --very-pale-blue: hsl(225, 100%, 98%); /* (Top BG Pattern) */
-  --light-grayish-blue: hsl(227, 47%, 96%); /* (Card BG) */
-  --dark-grayish-blue: hsl(228, 12%, 44%); /* (Text) */
-  --very-dark-blue: hsl(230, 17%, 14%); /* (Text) */
-}
+@use 'colors';
 
 * {
   box-sizing: border-box;
@@ -32,29 +9,29 @@
 }
 
 .light {
-  --background-color: var(--white);
-  --background-color-card: var(--light-grayish-blue);
-  --color-font-secondary: var(--dark-grayish-blue);
-  --color-font: var(--very-dark-blue);
-  --color-font-heading: var(--dark-grayish-blue);
-  --green: var(--lime-green);
-  --red: var(--bright-red);
-  --toggle: var(--toggle-light);
-  --switcher-hover: var(--toggle-dark);
-  --background-color-card-hover: var(--very-pale-blue);
+  --background-color: #{colors.$white};
+  --background-color-card: #{colors.$light-grayish-blue};
+  --color-font-secondary: #{colors.$dark-grayish-blue};
+  --color-font: #{colors.$very-dark-blue};
+  --color-font-heading: #{colors.$dark-grayish-blue};
+  --green: #{colors.$lime-green};
+  --red: #{colors.$bright-red};
+  --toggle: #{colors.$toggle-light};
+  --switcher-hover: #{colors.$toggle-dark};
+  --background-color-card-hover: #{colors.$very-pale-blue};
 }
 
 .dark {
-  --background-color: var(--very-dark-blue-bg);
-  --background-color-card: var(--dark-desaturated-blue);
-  --color-font-secondary: var(--desaturated-blue);
-  --color-font: var(--white);
-  --color-font-heading: var(--white);
-  --green: var(--lime-green);
-  --red: var(--bright-red);
-  --toggle: var(--toggle-dark);
-  --switcher-hover: var(--toggle-dark);
-  --background-color-card-hover: var(--very-dark-blue-bg-pattern);
+  --background-color: #{colors.$very-dark-blue-bg};
+  --background-color-card: #{colors.$dark-desaturated-blue};
+  --color-font-secondary: #{colors.$desaturated-blue};
+  --color-font: #{colors.$white};
+  --color-font-heading: #{colors.$white};
+  --green: #{colors.$lime-green};
+  --red: #{colors.$bright-red};
+  --toggle: #{colors.$toggle-dark};
+  --switcher-hover: #{colors.$toggle-dark};
+  --background-color-card-hover: #{colors.$very-dark-blue-bg-pattern};
 }
 
 html, body {
