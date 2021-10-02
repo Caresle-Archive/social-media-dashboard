@@ -10,14 +10,6 @@
 /* (Card BG) */
 /* (Text) */
 /* (Text) */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-
 .light {
   --background-color: white;
   --background-color-card: #f0f2fa;
@@ -44,12 +36,25 @@
   --background-color-card-hover: #1f212e;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
 html, body {
   font-size: 14px;
 }
 
 body {
   background-color: var(--background-color);
+  transition: background-color 0.25s;
+}
+
+.flex {
+  display: flex;
 }
 
 .main-container {
@@ -93,6 +98,10 @@ button:hover {
   margin-right: 2px;
 }
 
+.dashboard, .social-element, .stats-card {
+  margin: 8px 1.25rem;
+}
+
 .dashboard {
   padding: 0.5rem;
 }
@@ -115,12 +124,7 @@ button:hover {
 
 .dashboard > div {
   color: var(--color-font-secondary);
-  display: flex;
   justify-content: space-between;
-}
-
-.dashboard, .social-element, .stats-card {
-  margin: 8px 1.25rem;
 }
 
 .social-container {
@@ -132,10 +136,10 @@ button:hover {
 .social-element, .stats-card {
   background-color: var(--background-color-card);
   border-radius: 4px;
+  transition: background-color 0.25s;
 }
 
 .social-element {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -147,7 +151,6 @@ button:hover {
 }
 
 .social-element > span {
-  display: flex;
   align-items: center;
 }
 
@@ -255,7 +258,6 @@ button:hover {
 }
 
 .stats-card-item-1, .stats-card-item-2, .stats-card-item-3, .stats-card-item-4 {
-  display: flex;
   align-self: center;
 }
 

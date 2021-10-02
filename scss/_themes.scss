@@ -1,0 +1,27 @@
+@use 'colors';
+
+.light {
+  --background-color: #{colors.$white};
+  --background-color-card: #{colors.$light-grayish-blue};
+  --color-font-secondary: #{colors.$dark-grayish-blue};
+  --color-font: #{colors.$very-dark-blue};
+  --color-font-heading: #{colors.$dark-grayish-blue};
+  --green: #{colors.$lime-green};
+  --red: #{colors.$bright-red};
+  --toggle: #{colors.$toggle-light};
+  --switcher-hover: #{colors.$toggle-dark};
+  --background-color-card-hover: #{colors.$very-pale-blue};
+}
+
+.dark {
+  --background-color: #{colors.$very-dark-blue-bg};
+  --background-color-card: #{colors.$dark-desaturated-blue};
+  --color-font-secondary: #{colors.$desaturated-blue};
+  --color-font: #{colors.$white};
+  --color-font-heading: #{colors.$white};
+  --green: #{colors.$lime-green};
+  --red: #{colors.$bright-red};
+  --toggle: #{colors.$toggle-dark};
+  --switcher-hover: #{colors.$toggle-dark};
+  --background-color-card-hover: #{colors.$very-dark-blue-bg-pattern};
+}

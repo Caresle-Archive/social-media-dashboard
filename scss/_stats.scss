@@ -1,0 +1,92 @@
+@use 'colors';
+@use 'font';
+@use 'themes';
+
+.stats-number {
+  font-weight: font.$font-weight-big;
+  font-size: 3rem;
+  color: var(--color-font);
+  margin-top: 8px;
+}
+
+.followers {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: font.$font-weight-normal;
+  margin-bottom: 8px;
+}
+
+.today {
+  color: var(--color-font);
+  margin: 8px 0;
+}
+
+.today > img {
+  width: 12px;
+  height: 8px;
+  margin: 0 4px 8px 0;
+}
+
+.stats-up {
+  color: var(--green);
+}
+
+.stats-down {
+  color: var(--red);
+}
+
+.stats-card:hover {
+  background: var(--background-color-card-hover);
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 120px);
+}
+
+.stats-card {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "item-1 item-3" "item-2 item-4";
+}
+
+.stats-card-item-1 {
+  grid-area: item-1;
+  color: var(--color-font-secondary);
+  font-size: 1.1rem;
+}
+
+.stats-card-item-2 {
+  grid-area: item-2;
+  font-size: 2.2rem;
+}
+
+.stats-card-item-3 {
+  grid-area: item-3;
+}
+
+.stats-card-item-4 {
+  grid-area: item-4;
+}
+
+.stats-card-item-4 > img {
+  width: 12px;
+  height: 8px;
+  align-self: center;
+  margin-right: 4px;
+}
+
+.stats-card-item-1, .stats-card-item-2, .stats-card-item-3, .stats-card-item-4 {
+  align-self: center;
+}
+
+.stats-card-item-1, .stats-card-item-2 {
+  font-weight: font.$font-weight-big;
+  margin-left: 10px;
+}
+
+.stats-card-item-3, .stats-card-item-4 {
+  justify-self: center;
+}

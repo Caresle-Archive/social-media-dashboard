@@ -1,0 +1,28 @@
+@use 'colors';
+@use 'font';
+@use 'themes';
+
+.dashboard {
+  padding: 0.5rem;
+}
+
+.dashboard span, .dashboard > p, .dashboard {
+  font-weight: font.$font-weight-big;
+}
+
+.dashboard > span {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.dashboard > p {
+  color: var(--color-font-secondary);
+  border-bottom: 1px solid var(--color-font-secondary);
+  margin: 8px 0;
+}
+
+.dashboard > div {
+  color: var(--color-font-secondary);
+  justify-content: space-between;
+}
